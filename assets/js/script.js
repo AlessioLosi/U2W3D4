@@ -70,18 +70,18 @@ const changephoto2 = function (photos) {
 
 
 const deleteButton = function () {
-    const arrayOfCards = document.querySelectorAll('.col-md-4');
-    console.log(arrayOfCards)
 
     const arrayOfButtons = document.querySelectorAll('#hide');
     arrayOfButtons.forEach((button) => {
-        button.innerHTML = 'hide'
-        arrayOfCards.forEach((item) => {
-            button.addEventListener('click', () => {
-                item.remove();
-            });
-        })
+        button.innerHTML = 'hide';
+        button.addEventListener('click', () => {
+        const card = button.closest('.col-md-4');
+        if (card) {
+            card.remove();
+        }
+        });
     })
+    
 }
 
 

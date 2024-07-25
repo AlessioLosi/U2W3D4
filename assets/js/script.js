@@ -67,10 +67,14 @@ const changephoto2 = function (photos) {
         });
     });
 }
-const hideButton = document.getElementsByClassName('hide');
+
 
 const deleteButton = function () {
-
+const hideButton = document.querySelectorAll('#hide');
+hideButton.forEach((button)=>{
+    button.innerHTML='hide'
+})
+deleteCard()
 }
 
 
